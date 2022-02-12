@@ -1,0 +1,206 @@
+
+/*
+        ajuste del padding y margin de todo el documento asi como establecer
+        monospace como fuente basica (si quieres modificar la fuenete base 
+        de la web hazlo aqui)
+*/
+* {
+        padding: 0;
+        margin: 0;
+        font-family: monospace;
+}
+/* variables 
+        conjunto de variables que usaras en la web para ahorrarte ponerlo en varios 
+        sitios cuando quieres cambiar algo:
+        simplemente pon en el sitio donde quieres cambiar la variable var(nombre-variable);
+*/
+:root {
+        --bg-color: #ffffff;
+        --menu-color: #f08080; 
+}
+
+/*
+        los li no deben tener el punto caracteristico de las listas y eso 
+        se consigue con este estilo
+*/
+li {
+        list-style: none;
+}
+
+/*
+        el cuerpo debe tener un borde como el que se dijo de 10 px en los lados inferiorr, 
+        izquierdo y derecho ademas le he puesto el 100vh de min-height para que se adapte 
+        al tamano de la pantalla
+*/
+body {
+        border-style: solid;
+        border-color: var(--menu-color);
+        border-width: 0px 10px 10px 10px;
+        height: 100%;
+        min-height: 100vh;
+}
+/*
+        el menu esta hecho con un nav que tiene una posicion fija en el costado izquierdo y 
+        cuyo background es del color del menu, ademas se expande automaticamente con el 
+        width auto
+*/
+#menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: var(--menu-color);
+        width: auto;
+}
+
+/* desktop responsive (para escritorio) */
+
+/* 
+        aqui estan los responsive, ajustalos como veas conveniente y te recomiendo hacer una 
+        copia de seguridad del css por si lo modificas mucho y quieres volver atras (suele pasar)
+*/
+@media only screen and (min-width: 1200px) { 
+        .menu-desc {
+                padding: 10px;
+                text-align: center;
+                font-size: 12px;
+                margin-left: 5px;
+                margin-right: 5px;
+                display: none;
+        }
+        .menu-desc-shown {
+                display: block;
+        }
+        li {
+                display:flex;
+                align-items: flex-start;
+        }
+        .menu-button { 
+                border-style: solid;
+                border-color: transparent;
+                border-radius: 3px;
+                
+                margin: 10px;
+                background-color: var(--menu);
+                text-align: center;
+                width: 50px;
+                
+                font-size: 20px;
+                font-weight: bold;
+                font-family: monospace;
+                
+                padding: 3px;
+                transition: .6s;
+        }
+        .menu-button:active{
+                background-color: var(--menu-2);  
+        }
+        .menu-button:hover {
+                width: 160px;
+        }
+        ul {
+                width: 100%;
+                height: auto;
+                display:grid;
+                grid-template-columns: 100%;
+                grid-auto-rows: auto;
+        }
+}
+
+/* tablet responsive */
+@media only screen and (max-width: 1200px) and (min-width: 670px) {
+        .menu-desc {
+                padding: 10px;
+                text-align: center;
+                font-size: 12px;
+                margin-left: 5px;
+                margin-right: 5px;
+                display: none;
+        }
+        .menu-desc-shown {
+                display: block;
+        }
+        li {
+                display:flex;
+                align-items: flex-start;
+        }
+        .menu-button { 
+                border-style: solid;
+                border-color: transparent;
+                border-radius: 3px;
+                
+                margin: 10px;
+                background-color: var(--menu);
+                text-align: center;
+                width: 50px;
+                
+                font-size: 20px;
+                font-weight: bold;
+                font-family: monospace;
+                
+                padding: 3px;
+                transition: .6s;
+        }
+        .menu-button:active{
+                background-color: var(--menu-2);  
+        }
+        .menu-button:hover {
+                width: 160px;
+        }
+        ul {
+                width: 100%;
+                height: auto;
+                display:grid;
+                grid-template-columns: 100%;
+                grid-auto-rows: auto;
+        }
+}
+
+/* mobile responsive*/
+@media only screen and (max-width: 670px) {
+        .menu-desc {
+                padding: 10px;
+                text-align: center;
+                font-size: 12px;
+                margin-left: 5px;
+                margin-right: 5px;
+                display: none;
+        }
+        .menu-desc-shown {
+                display: block;
+        }
+        li {
+                display:flex;
+                align-items: flex-start;
+        }
+        .menu-button { 
+                border-style: solid;
+                border-color: transparent;
+                border-radius: 3px;
+                
+                margin: 10px;
+                background-color: var(--menu);
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                
+                font-size: 20px;
+                font-weight: bold;
+                font-family: monospace;
+                
+                padding: 3px;
+                transition: .6s;
+        }
+        .menu-button:active{
+                background-color: var(--menu-2);  
+        }
+        .menu-button:hover {
+                width: 120px;
+        }
+        ul {
+                width: 100%;
+                height: auto; 
+                display:grid;
+                grid-template-columns: 100%;
+                grid-auto-rows: auto;
+        }
+}

@@ -1,0 +1,35 @@
+const MenuHTML = [
+        ```
+        <li>
+        <button class="menu-button">
+        <img src=" ```
+       ,
+       ```
+        ">
+        </button>
+        </li>
+        ```
+];
+
+const MenuImg = [
+        "home.jpg"
+        "cars.jpg"
+        "about.jpg"
+];
+
+const MenuDesc = [
+        "description 1",
+        "description 2",
+        "description 3"
+];
+
+function loadMenu () {
+        content = "";
+        if (MenuImg.length() != MenuDesc.length())
+                console.error("please check that each menu item has description and image");
+
+        MenuImg.forEach ( (e,it)=> {
+                content += MenuHTML[0] + MenuImg[it] + MenuHTML[1];
+        });
+        $('#menu').html(lcontent);
+} 
