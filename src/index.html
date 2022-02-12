@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="utf-8">
+                <!--esto es para poner un autorecargado de la pagina cadam 6 segundos
+                y en un principio es para simplificar la tarea de ir recargando -->
+                <!--<meta http-equiv="refresh" content="6">-->
+                <title>titulo</title>
+                <link href="style.css" rel="stylesheet" />
+                <!--jquery integrado (si vas a llevarlo a produccion, descarga el codigo
+                fuente de jquery y lo linkeas de local -->
+                <script
+			  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+			  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+			  crossorigin="anonymous">
+                </script>
+                <!--esto es bootstrap que lo he usado para los iconos
+                -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        </head>
+        <body>
+                <!--aqui puedes poner tu cabecera, te recomiendo que para anustarlo y que no lo tape el menu
+                no uses position absolute y cosas de esas ya que eso acaba rompiendo tu web
+                al querer añadir funcionalidades, para eso simplemente ponle un padding-left para que los
+                elementos queden un poco desplazados-->
+                <header></header>
+                <!--El menu en un principio esta vacio pero si quieres llenarlo, coloca los elementos en el codigo
+                javascript app/index.js
+                Ahi puedes añadir los elementos en un array y solo con un for se completa el DOM-->
+                <nav>
+                        <ul id="menu">
+                        </ul>
+                </nav>
+                <!--Aqui va el nucleo de tu web, te recomiendo que lo hagas SPA, osea que en cada click de un boton del menu,
+                en lugar de redirigir la web a otra web, cambies el contenido de main y asi te ahorras tiempo de carga web
+                -->
+                <main></main>
+                <!--Este lugar esta dedicado al pie de pagina donde pondras informacion de contacto e informacion legal-->
+                <footer></footer>
+                <!--El script app/index.js se ejecuta una vez el DOM esta completo-->
+                <script src="app/index.js"></script>
+        </body>
+</html>
